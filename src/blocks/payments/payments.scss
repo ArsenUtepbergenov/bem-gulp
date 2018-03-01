@@ -1,3 +1,26 @@
+@import "../variables";
+
 .payments {
-  
+  margin: auto;
+  padding: 50px 0;
+
+  &__info {
+    margin: auto;
+    color: #96a3b6;
+  }
+
+  &__heading {
+    text-align: center;
+    color: #383d43;
+  }
+
+  @media screen and (min-width: $screen-t) {
+    &__heading {
+      text-align: left;
+    }
+  }
+
+  @media screen and (min-width: $screen-l) {
+    width: 580px;
+  }
 }

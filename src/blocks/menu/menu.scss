@@ -1,15 +1,50 @@
 @import "../variables";
 
 .menu {
-  &__item {
+  background-color: #1f2229;
+  height: 75px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  transition: height 0.3s ease-out;
+  width: 100%;
+  overflow-y: hidden;
 
+  &__item {
+    text-align: center;
+    padding: 28.5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
   }
 
-  @media (min-width: $screen-ms) {
+  @media screen and (min-width: $screen-t) {
+    width: 320px;
+    position: relative;
+    height: 375px;
 
+    &--toggle {
+      display: none;
+    }
   }
 
   &--active {
+    background-color: #2a2d37;
+  }
+}
 
+.menu.open {
+  height: 450px;
+
+  @media screen and (min-width: $screen-t) {
+    height: 375px;
+
+    .menu--toggle {
+      display: none;
+    }
   }
 }

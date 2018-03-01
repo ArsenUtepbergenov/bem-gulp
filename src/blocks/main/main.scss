@@ -1,3 +1,10 @@
+@import "../variables";
+
 .main {
-  
+  margin-top: 75px;
+  background-color: #f7f8f8;
+
+  @media screen and (min-width: $screen-t) {
+    margin-top: 0;
+  }
 }

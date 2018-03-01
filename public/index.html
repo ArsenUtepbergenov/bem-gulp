@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/bundle.css">
   <title>Test</title>
 </head>
 <body>
   <!-- Menu -->
   <nav class="menu">
+    <a href="#" class="menu__item menu--toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></a>
     <a href="#" class="menu__item">Личный кабинет</a>
     <a href="#" class="menu__item menu--active">Платежи</a>
     <a href="#" class="menu__item">История платежей</a>
@@ -20,7 +23,7 @@
   <main class="main">
     <section class="payments">
       <!-- Table of information about payment -->
-      <table>
+      <table class="payments__info">
         <caption>Информация по оплате:</caption>
         <tr>
           <td>Номер счета:</td>
@@ -31,40 +34,64 @@
           <td>100 руб.</td>
         </tr>
       </table>
-      <h3>Данные банковской карты</h3>
+      <h3 class="payments__heading">Данные банковской карты</h3>
       <!-- Form -->
       <form class="form" action="index.html" method="post">
         <!-- Card main side -->
         <fieldset class="card">
-          <label>Номер карты</label>
+          <label class="card__label">Номер карты</label>
           <input class="card__input" type="number">
           <input class="card__input" type="number">
           <input class="card__input" type="number">
           <input class="card__input" type="number">
-          <label>Срок действия</label>
+
+          <label class="card__label">Срок действия</label>
           <select class="card__select">
-            <option value="04"></option>
+            <option value="04">04</option>
           </select>
           <select class="card__select">
-            <option value="2018"></option>
+            <option value="2018">2018</option>
           </select>
-          <input class="card__input" type="text" placeholder="Держатель карты">
+
+          <input class="card__input card--owner" type="text" placeholder="Держатель карты">
         </fieldset>
         <!-- Card second side -->
         <fieldset class="card">
           <div class="card__line"></div>
-          <label>Код CVV2/CVC2</label>
+
+          <label class="card__label">Код CVV2 / CVC2</label>
           <input class="card__input" type="number">
         </fieldset>
+
         <button class="button" type="submit">Оплатить</button>
       </form>
     </section>
   </main>
   <!-- Footer -->
-  <footer>
-    <article class="description"></article>
+  <footer class="footer">
+    <article class="description">
+      <p>
+         Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть
+         артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет
+         систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.
+      </p>
+      <p>
+        Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.
+      </p>
+      <p>
+        Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.
+      </p>
+      <p>
+        Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция
+        вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена
+        покрывает вибрирующий волчок, что обусловлено не только первичными неровностями
+        эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее
+        поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.
+      </p>
+    </article>
   </footer>
   <!-- Scripts -->
-  <!-- <script src="./js/bundle.js"></script> -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <script src="./js/bundle.js"></script>
 </body>
 </html>

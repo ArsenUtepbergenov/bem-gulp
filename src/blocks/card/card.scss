@@ -1,13 +1,41 @@
-.card {
-  &__line {
+@import "../variables";
 
+.card {
+  height: 210px;
+  border: 1px solid #e4e9ee;
+  border-radius: 10px;
+  margin: 20px auto;
+
+  &__line {
+    height: 38px;
+    background-color: #e4e9ee;
+  }
+
+  &__label {
+    color: #96a3b6;
+    display: block;
+    margin: 12px 0;
   }
 
   &__input {
-
+    width: 60px;
+    height: 38px;
+    border: 1px solid #e4e9ee;
+    box-sizing: border-box;
   }
 
   &__select {
+    height: 34px;
+    border: 1px solid #e4e9ee;
+  }
 
+  @media screen and (min-width: $screen-t) {
+    width: 350px;
+  }
+
+  &--owner {
+    width: 100%;
+    margin: 12px 0;
+    padding: 0 15px;
   }
 }
