@@ -8,17 +8,63 @@
   <title>Test</title>
 </head>
 <body>
-  <main>
-    <aside class="menu">
-
-    </aside>
-    <section>
-
+  <!-- Menu -->
+  <nav class="menu">
+    <a href="#" class="menu__item">Личный кабинет</a>
+    <a href="#" class="menu__item menu--active">Платежи</a>
+    <a href="#" class="menu__item">История платежей</a>
+    <a href="#" class="menu__item">Настройка</a>
+    <a href="#" class="menu__item">Выйти</a>
+  </nav>
+  <!-- Main -->
+  <main class="main">
+    <section class="payments">
+      <!-- Table of information about payment -->
+      <table>
+        <caption>Информация по оплате:</caption>
+        <tr>
+          <td>Номер счета:</td>
+          <td>87123658716587</td>
+        </tr>
+        <tr>
+          <td>Сумма платежа:</td>
+          <td>100 руб.</td>
+        </tr>
+      </table>
+      <h3>Данные банковской карты</h3>
+      <!-- Form -->
+      <form class="form" action="index.html" method="post">
+        <!-- Card main side -->
+        <fieldset class="card">
+          <label>Номер карты</label>
+          <input class="card__input" type="number">
+          <input class="card__input" type="number">
+          <input class="card__input" type="number">
+          <input class="card__input" type="number">
+          <label>Срок действия</label>
+          <select class="card__select">
+            <option value="04"></option>
+          </select>
+          <select class="card__select">
+            <option value="2018"></option>
+          </select>
+          <input class="card__input" type="text" placeholder="Держатель карты">
+        </fieldset>
+        <!-- Card second side -->
+        <fieldset class="card">
+          <div class="card__line"></div>
+          <label>Код CVV2/CVC2</label>
+          <input class="card__input" type="number">
+        </fieldset>
+        <button class="button" type="submit">Оплатить</button>
+      </form>
     </section>
   </main>
+  <!-- Footer -->
   <footer>
-
+    <article class="description"></article>
   </footer>
+  <!-- Scripts -->
   <!-- <script src="./js/bundle.js"></script> -->
 </body>
 </html>
