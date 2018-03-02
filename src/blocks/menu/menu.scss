@@ -2,14 +2,14 @@
 
 .menu {
   background-color: #1f2229;
-  height: 75px;
+  width: 0;
+  height: 100%;
   position: fixed;
-  z-index: 1;
-  top: 0;
+  z-index: 3;
+  top: 75px;
   left: 0;
-  transition: height 0.3s ease-out;
-  width: 100%;
-  overflow-y: hidden;
+  transition: width 0.3s ease-out;
+  overflow-x: hidden;
 
   &__item {
     text-align: center;
@@ -20,16 +20,28 @@
     text-decoration: none;
     display: block;
     cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
 
-  @media screen and (min-width: $screen-t) {
+  @media screen and (min-width: $screen-l) {
     width: 320px;
-    position: relative;
     height: 375px;
+    position: absolute;
+    top: 0;
+
+    &__item {
+      opacity: 1;
+    }
 
     &--toggle {
       display: none;
     }
+  }
+
+  &--toggle {
+    width: 18px;
+    opacity: 1;
   }
 
   &--active {
@@ -38,11 +50,13 @@
 }
 
 .menu.open {
-  height: 450px;
+  width: 320px;
 
-  @media screen and (min-width: $screen-t) {
-    height: 375px;
+  .menu__item {
+    opacity: 1;
+  }
 
+  @media screen and (min-width: $screen-l) {
     .menu--toggle {
       display: none;
     }

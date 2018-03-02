@@ -9,87 +9,97 @@
   <link rel="stylesheet" href="./css/bundle.css">
   <title>Test</title>
 </head>
-<body>
-  <!-- Menu -->
-  <nav class="menu">
+<body style="background-color: #101114">
+  <header class="header">
     <a href="#" class="menu__item menu--toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></a>
-    <a href="#" class="menu__item">Личный кабинет</a>
-    <a href="#" class="menu__item menu--active">Платежи</a>
-    <a href="#" class="menu__item">История платежей</a>
-    <a href="#" class="menu__item">Настройка</a>
-    <a href="#" class="menu__item">Выйти</a>
-  </nav>
-  <!-- Main -->
-  <main class="main">
-    <section class="payments">
-      <!-- Table of information about payment -->
-      <table class="payments__info">
-        <caption>Информация по оплате:</caption>
-        <tr>
-          <td>Номер счета:</td>
-          <td>87123658716587</td>
-        </tr>
-        <tr>
-          <td>Сумма платежа:</td>
-          <td>100 руб.</td>
-        </tr>
-      </table>
-      <h3 class="payments__heading">Данные банковской карты</h3>
-      <!-- Form -->
-      <form class="form" action="index.html" method="post">
-        <!-- Card main side -->
-        <fieldset class="card">
-          <label class="card__label">Номер карты</label>
-          <input class="card__input" type="number">
-          <input class="card__input" type="number">
-          <input class="card__input" type="number">
-          <input class="card__input" type="number">
+  </header>
+  <div class="layout">
+    <!-- Menu -->
+    <nav class="menu">
+      <a href="#" class="menu__item">Личный кабинет</a>
+      <a href="#" class="menu__item menu--active">Платежи</a>
+      <a href="#" class="menu__item">История платежей</a>
+      <a href="#" class="menu__item">Настройка</a>
+      <a href="#" class="menu__item">Выйти</a>
+    </nav>
+    <!-- Main -->
+    <main class="main">
+      <section class="payments">
+        <!-- Table of information about payment -->
+        <table class="payments__info">
+          <caption class="payments__info-caption">Информация по оплате:</caption>
+          <tr>
+            <td>Номер счета:</td>
+            <td>87123658716587</td>
+          </tr>
+          <tr>
+            <td>Сумма платежа:</td>
+            <td>100 руб.</td>
+          </tr>
+        </table>
+        <h3 class="payments__heading">Данные банковской карты</h3>
+        <!-- Form -->
+        <form class="form" action="index.html" method="post">
+          <div class="form__fields">
+            <!-- Card main side -->
+            <fieldset class="card">
+              <label class="card__label">Номер карты</label>
+              <input class="card__input" type="number" required>
+              <input class="card__input" type="number" required>
+              <input class="card__input" type="number" required>
+              <input class="card__input" type="number" required>
 
-          <label class="card__label">Срок действия</label>
-          <select class="card__select">
-            <option value="04">04</option>
-          </select>
-          <select class="card__select">
-            <option value="2018">2018</option>
-          </select>
+              <label class="card__label">Срок действия</label>
+              <label class="card__custom-select">
+                <select class="card__select">
+                  <option value="04">04</option>
+                </select>
+                <i class="fas fa-angle-down card__icon"></i>
+              </label>
+              <label class="card__custom-select">
+                <select class="card__select">
+                  <option value="2018">2018</option>
+                </select>
+                <i class="fas fa-angle-down card__icon"></i>
+              </label>
+              <input class="card__input card--owner" type="text" placeholder="Держатель карты" required>
+            </fieldset>
+            <!-- Card second side -->
+            <fieldset class="card card--second-side">
+              <div class="card__line"></div>
 
-          <input class="card__input card--owner" type="text" placeholder="Держатель карты">
-        </fieldset>
-        <!-- Card second side -->
-        <fieldset class="card">
-          <div class="card__line"></div>
-
-          <label class="card__label">Код CVV2 / CVC2</label>
-          <input class="card__input" type="number">
-        </fieldset>
-
-        <button class="button" type="submit">Оплатить</button>
-      </form>
-    </section>
-  </main>
-  <!-- Footer -->
-  <footer class="footer">
-    <article class="description">
-      <p>
-         Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть
-         артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет
-         систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.
-      </p>
-      <p>
-        Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.
-      </p>
-      <p>
-        Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.
-      </p>
-      <p>
-        Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция
-        вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена
-        покрывает вибрирующий волчок, что обусловлено не только первичными неровностями
-        эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее
-        поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.
-      </p>
-    </article>
-  </footer>
+              <label class="card__label card--label-second-side">Код CVV2 / CVC2</label>
+              <input class="card__input card--code" type="number" required>
+            </fieldset>
+          </div>
+          <button class="button" type="submit">Оплатить</button>
+        </form>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <article class="description">
+        <p>
+           Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть
+           артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет
+           систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.
+        </p>
+        <p>
+          Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.
+        </p>
+        <p>
+          Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.
+        </p>
+        <p>
+          Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция
+          вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена
+          покрывает вибрирующий волчок, что обусловлено не только первичными неровностями
+          эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее
+          поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.
+        </p>
+      </article>
+    </footer>
+  </div>
   <!-- Scripts -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
   <script src="./js/bundle.js"></script>

@@ -1,4 +1,13 @@
+@import "../variables";
+
 .footer {
   background-color: #373c43;
   padding: 30px;
+
+  @media screen and (min-width: $screen-l) {
+    position: absolute;
+    left: 320px;
+    top: 570px;
+    box-sizing: border-box;
+  }
 }

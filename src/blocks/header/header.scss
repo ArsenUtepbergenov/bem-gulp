@@ -1,0 +1,9 @@
+@import "../variables";
+
+.header {
+  background-color: #1f2229;
+
+  @media screen and (min-width: $screen-l) {
+    display: none;
+  }
+}

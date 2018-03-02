@@ -9,18 +9,32 @@
     color: #96a3b6;
   }
 
+  &__info-caption {
+    text-align: left;
+    padding-left: 3px;
+    padding-bottom: 20px;
+  }
+
   &__heading {
     text-align: center;
     color: #383d43;
   }
 
-  @media screen and (min-width: $screen-t) {
-    &__heading {
-      text-align: left;
+  @media screen and (min-width: $screen-ml) {
+    &__info {
+      width: 320px;
     }
   }
 
   @media screen and (min-width: $screen-l) {
+    &__info {
+      margin: initial;
+    }
+
+    &__heading {
+      text-align: left;
+    }
+
     width: 580px;
   }
 }

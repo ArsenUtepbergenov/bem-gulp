@@ -1,3 +1,5 @@
+@import "../variables";
+
 .button {
   border: none;
   border-radius: 20px;
@@ -7,4 +9,8 @@
   margin: auto;
   display: block;
   cursor: pointer;
+
+  @media screen and (min-width: $screen-l) {
+    margin: initial;
+  }
 }

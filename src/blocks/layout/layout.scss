@@ -1,0 +1,9 @@
+@import "../variables";
+
+.layout {
+  @media screen and (min-width: $screen-l) {
+    width: 960px;
+    margin: auto;
+    position: relative;
+  }
+}

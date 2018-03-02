@@ -1,3 +1,17 @@
+@import "../variables";
+
 .form {
-  
+  @media screen and (min-width: $screen-t) {
+    &__fields {
+      margin: 0 auto 20px auto;
+      position: relative;
+      width: 562px;
+    }
+  }
+
+  @media screen and (min-width: $screen-l) {
+    &__fields {
+      margin: 0 0 20px 0;
+    }
+  }
 }
