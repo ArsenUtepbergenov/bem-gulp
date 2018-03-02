@@ -1,7 +1,6 @@
 const gulp = require('gulp'),
   sass = require('gulp-sass'),
   concat = require('gulp-concat'),
-  sourcemaps = require('gulp-sourcemaps'),
   autoprefixer = require('gulp-autoprefixer'),
   browserSync = require('browser-sync').create();
 
@@ -27,17 +26,16 @@ gulp.task('js-watch', ['copy-js'], function(done) {
 // styles: compile sass -> add prefixes -> concat
 gulp.task('styles', function() {
   return gulp.src(paths.styles)
-    .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['ie >= 9',
-                 'firefox >= 40',
-                 'chrome >= 40',
-                 'safari >= 7'
-      ]
+                 'Firefox >= 40',
+                 'Chrome >= 40',
+                 'Safari >= 7'
+      ],
+      cascade: false
     }))
     .pipe(concat('bundle.css'))
-    .pipe(sourcemaps.write())
     .pipe(gulp.dest('public/css/'))
     .pipe(browserSync.stream());
 });
