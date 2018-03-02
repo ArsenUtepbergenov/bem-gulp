@@ -30,6 +30,7 @@
     border: 1px solid #e4e9ee;
     padding: 0 13px;
     box-sizing: border-box;
+    outline-color: lightgreen;
   }
 
   &__custom-select {
@@ -84,6 +85,14 @@
     padding: 0 15px;
   }
 
+  &--owner:invalid {
+    outline-color: red;
+  }
+
+  &--owner:valid {
+    outline-color: lightgreen;
+  }
+
   &--code {
     width: 136px;
     position: absolute;
@@ -95,6 +104,15 @@
     position: absolute;
     right: 25px;
     top: 65px;
+  }
+
+  &--icon-second-side {
+    right: 25px;
+    top: 110px;
+  }
+
+  &--error {
+    outline-color: red;
   }
 }
 

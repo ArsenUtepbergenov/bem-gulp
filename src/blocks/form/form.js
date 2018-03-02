@@ -29,7 +29,3 @@ function isNumeric(event) {
     if (tempEvent.preventDefault) tempEvent.preventDefault();
   }
 }
-
-function toggleMenu() {
-  document.querySelector('.menu').classList.toggle('open');
-}

@@ -44,10 +44,34 @@
             <!-- Card main side -->
             <fieldset class="card">
               <label class="card__label">Номер карты</label>
-              <input class="card__input" type="number" required>
-              <input class="card__input" type="number" required>
-              <input class="card__input" type="number" required>
-              <input class="card__input" type="number" required>
+              <input class="card__input"
+                     type="number"
+                     min="0"
+                     max="9999"
+                     onkeypress="return isNumeric(event)"
+                     oninput="lengthCheck(this)"
+                     required>
+              <input class="card__input"
+                     type="number"
+                     min="0"
+                     max="9999"
+                     onkeypress="return isNumeric(event)"
+                     oninput="lengthCheck(this)"
+                     required>
+              <input class="card__input"
+                     type="number"
+                     min="0"
+                     max="9999"
+                     onkeypress="return isNumeric(event)"
+                     oninput="lengthCheck(this)"
+                     required>
+              <input class="card__input"
+                     type="number"
+                     min="0"
+                     max="9999"
+                     onkeypress="return isNumeric(event)"
+                     oninput="lengthCheck(this)"
+                     required>
 
               <label class="card__label">Срок действия</label>
               <label class="card__custom-select">
@@ -62,14 +86,26 @@
                 </select>
                 <i class="fas fa-angle-down card__icon"></i>
               </label>
-              <input class="card__input card--owner" type="text" placeholder="Держатель карты" required>
+              <input class="card__input card--owner"
+                     type="text"
+                     placeholder="Держатель карты"
+                     pattern="[A-Za-z]{4,}"
+                     oninvalid="invalidOwner(this)"
+                     required>
             </fieldset>
             <!-- Card second side -->
             <fieldset class="card card--second-side">
               <div class="card__line"></div>
 
               <label class="card__label card--label-second-side">Код CVV2 / CVC2</label>
-              <input class="card__input card--code" type="number" required>
+              <input class="card__input card--code"
+                     type="number"
+                     min="0"
+                     max="999"
+                     onkeypress="return isNumeric(event)"
+                     oninput="lengthCheck(this)"
+                     required>
+              <i class="far fa-question-circle fa-lg card__icon card--icon-second-side"></i>
             </fieldset>
           </div>
           <button class="button" type="submit">Оплатить</button>
